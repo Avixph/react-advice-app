@@ -1,0 +1,40 @@
+:root {
+  --first-color: #faf07f;
+  --second-color: #ffa061;
+  --third-color: #fec081;
+  --fourth-color: #f9f9fb;
+  --fifth-color: #616161;
+  --sixth-color: #bb2121;
+  --shadow: 6px 6px 9px #00000031, -6px -6px 9px #a3a0a013;
+  --shadow-inset: inset 6px 6px 9px #00000031, inset -6px -6px 9px #a3a0a025;
+}
+
+/* .advice-wrap div{
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+} */
+
+.advice-request {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+}
+
+.advice-request button {
+  width: 350px;
+  height: 6vh;
+  margin-bottom: 20px;
+  border: none;
+  outline: none;
+  align-items: center;
+  text-align: center;
+  background-color: var(--second-color);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  font-weight: 600;
+  transition: 0.2s ease-out;
+}
+.advice-request button:active {
+  box-shadow: var(--shadow-inset);
+}

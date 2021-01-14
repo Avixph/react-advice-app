@@ -1,0 +1,32 @@
+:root {
+  --first-color: #faf07f;
+  --second-color: #ffa061;
+  --third-color: #fec081;
+  --fourth-color: #f9f9fb;
+  --fifth-color: #616161;
+  --sixth-color: #bb2121;
+  --shadow: 6px 6px 9px #00000031, -6px -6px 9px #a3a0a013;
+  --shadow-inset: inset 6px 6px 9px #00000031, inset -6px -6px 9px #a3a0a025;
+}
+
+.advice-container {
+  flex: 1 1 100%;
+  padding: 30px;
+  width: 300px;
+  height: 200px;
+  margin: 1.5rem auto;
+  margin-bottom: -600px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 1rem;
+  box-shadow: var(--shadow);
+  background-color: var(--fourth-color);
+  border: 3px solid var(--second-color);
+}
+.advice-container p {
+  color: var(--third-color);
+  font-size: 1.5rem;
+}
