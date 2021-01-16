@@ -13,8 +13,11 @@ function Search() {
   };
 
   const getSearchRandAdvice = () => {
-    const searchSlip = axios.get(`${SEARCH_URL}${searchResult}`);
-    searchSlip.then(({ data }) => {
+    const searchSlip = `${SEARCH_URL}${searchResult}`;
+    console.log(searchSlip);
+
+    axios.get(searchSlip).then(({ data }) => {
+      console.log(data);
       setSearchRandAdvice(data.slips[0]);
       console.log(data.slips[0]);
     });
@@ -25,6 +28,18 @@ function Search() {
 
   return (
     <div className="advice-search">
+      {searchRandAdvice === undefined ? (
+        ``
+      ) : (
+        <Advice searchRandAdvice={searchRandAdvice.advice} />
+      )}
+      {/* <div className="search-advice-container">
+        {searchRandAdvice === undefined ? (
+          ``
+        ) : (
+          <Advice searchRandAdvice={searchRandAdvice.advice} />
+        )}
+      </div> */}
       <form action="" className="search-bar">
         <input
           type="text"
@@ -34,13 +49,6 @@ function Search() {
         <button type="submit" onClick={getSearchRandAdvice}>
           Ask Advice
         </button>
-        <div className="search-advice-container">
-          {searchRandAdvice === undefined ? (
-            ``
-          ) : (
-            <Advice searchRandAdvice={searchRandAdvice.advice} />
-          )}
-        </div>
       </form>
     </div>
   );
